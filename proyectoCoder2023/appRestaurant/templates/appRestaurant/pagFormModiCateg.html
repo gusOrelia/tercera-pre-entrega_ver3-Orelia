@@ -1,0 +1,21 @@
+{% extends "appRestaurant\pagPadre.html" %}
+
+{% load static %}
+
+{% block scriptCambio %}
+
+    <h1>MODIFICAR CATEGORIA: </h1>
+   
+    <form action="" method="POST">{% csrf_token %}
+       
+        <table>
+
+            {{ formCategoria.as_table }}
+
+        </table>
+
+        <input type="submit", value="Enviar">
+
+    </form>
+    
+{% endblock %}

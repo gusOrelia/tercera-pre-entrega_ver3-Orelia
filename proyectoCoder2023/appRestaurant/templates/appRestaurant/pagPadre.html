@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+
+	<title>Menú superior</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		nav {
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 10px;
+		}
+		nav a {
+			color: #333;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+		}
+	</style>
+
+	{% block scriptCambio %}
+
+    {% endblock %}
+
+</head>
+<body>
+	<header>
+		<h1>Menú superior</h1>
+	</header>
+	
+	<nav>
+		<a href="#">Inicio</a>
+		<a href={% url 'listadoCategoria' %}>Categoria</a>
+		<a href={% url 'listadoCategoria' %}>Productos</a>
+		<a href="#">Contacto</a>
+	</nav>
+</body>
+</html>

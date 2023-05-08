@@ -1,0 +1,15 @@
+{% extends "appRestaurant\pagPadre.html" %}
+
+{% load static %}
+
+{% block scriptCambio %}
+
+    <form action="/appRestaurant/buscar" method="get">
+
+        <input type="number" name="categoria" id="categoria">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+{% endblock %}

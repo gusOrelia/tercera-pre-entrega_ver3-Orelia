@@ -1,0 +1,27 @@
+{% extends "appRestaurant\pagPadre.html" %}
+
+{% load static %}
+
+{% block scriptCambio %}
+
+    <h1>NUEVA CATEGORIA: </h1>
+   
+    <form action="" method="post">{% csrf_token %}
+        <!-- Aca esta la magia de Django-->
+        <table>
+
+            {% for campo in formCategoria %}
+                <p>
+                    <label>{{ campo.label }}</label>
+                    {{ campo }}
+
+                </p>
+            {% endfor %}
+        </table>
+
+        <input type="submit", value="Enviar">
+        
+     </form>   
+    
+{% endblock %}
+

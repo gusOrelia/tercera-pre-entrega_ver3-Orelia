@@ -1,0 +1,21 @@
+{% extends "appRestaurant\pagPadre.html" %}
+
+{% load static %}
+
+{% block scriptCambio %}
+
+    <h1>LISTADO DE CATEGORIAS: </h1>
+
+    {% for vl_elemento in categoria %}
+        <li>
+            {{vl_elemento}}
+            <a href="{% url 'categoria_modificar' vl_elemento.id %}">Update</a>
+
+            
+        </li>  
+        
+    {% endfor %}
+    
+    <a href="formNuevaCateg">Agregar otra categoria</a>
+    <a href="buscarCateg">Buscar Categoria</a>
+{% endblock %}
